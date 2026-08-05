@@ -120,6 +120,10 @@ const AboutPage: React.FC = () => {
                   <span className="skill-tag">GitHub</span>
                   <span className="skill-tag">Postman</span>
                   <span className="skill-tag">Docker</span>
+                  <span className="skill-tag">Vercel</span>
+                  <span className="skill-tag">Render</span>
+                  <span className="skill-tag">MongoDB Compass</span>
+                  <span className="skill-tag">MongoDB shell- Mongosh </span>
                  
                   
                 </div>
