@@ -1,0 +1,409 @@
+/* HomePage.css */
+
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0b0d0f;
+  color: #e5e9f0;
+  line-height: 1.6;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.homepage {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #0b0d0f;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Entry animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---- Navbar ---- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  animation: fadeInDown 0.6s ease-out;
+  position: relative;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0.5rem;
+  gap: 5px;
+  z-index: 100;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 2px;
+  background-color: #e5e9f0;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -5px);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  font-size: 0.95rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #b0b8c4;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+.nav-links a span {
+  color: #b0b8c4;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover span {
+  color: #ffffff;
+}
+
+.hire-btn {
+  background: transparent;
+  border: 1px solid #5a6a7a;
+  color: #e5e9f0;
+  padding: 0.4rem 1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.hire-btn:hover {
+  background: #ffffff;
+  color: #0b0d0f;
+  border-color: #ffffff;
+  transform: scale(1.02);
+}
+
+/* ---- Hero ---- */
+.hero {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.5rem 0;
+  gap: 3rem;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+  animation: fadeInLeft 0.8s ease-out 0.2s both;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInRight 0.8s ease-out 0.4s both;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.profile-photo {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.03);
+  border-color: rgba(122, 169, 255, 0.3);
+  box-shadow: 0 30px 80px rgba(122, 169, 255, 0.15);
+}
+
+.hero-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.02em;
+}
+
+.hero-title .highlight {
+  background: linear-gradient(135deg, #b0d0ff, #7aa9ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  color: #b0b8c4;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.8rem;
+  border-radius: 40px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+}
+
+.btn.primary {
+  background: #ffffff;
+  color: #0b0d0f;
+  border: 1px solid #ffffff;
+}
+
+.btn.primary:hover {
+  background: transparent;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.08);
+}
+
+.btn.secondary {
+  background: transparent;
+  color: #e5e9f0;
+  border: 1px solid #4a5a6a;
+}
+
+.btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: #8a9aaa;
+  transform: translateY(-2px);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1024px) {
+  .profile-photo {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-title {
+    font-size: 2.8rem;
+  }
+  
+  .profile-photo {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .homepage {
+    padding: 1rem 1.5rem;
+  }
+
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    flex-wrap: nowrap;
+  }
+
+  /* Show hamburger on mobile */
+  .hamburger {
+    display: flex !important;
+  }
+
+  /* Hide desktop nav links by default on mobile */
+  .nav-links {
+    display: none !important;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #0b0d0f;
+    padding: 1.5rem 2rem;
+    gap: 1.2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    z-index: 99;
+    width: 100%;
+  }
+
+  .nav-links.open {
+    display: flex !important;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    width: 100%;
+  }
+
+  .nav-links a span {
+    font-size: 1rem;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 1.5rem 0;
+    gap: 2rem;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .profile-photo {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  .homepage {
+    padding: 0.8rem 1rem;
+  }
+  
+  .profile-photo {
+    width: 160px;
+    height: 160px;
+  }
+
+  .nav-links {
+    padding: 1rem 1rem;
+  }
+}
