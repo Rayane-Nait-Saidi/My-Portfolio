@@ -90,6 +90,7 @@ const AboutPage: React.FC = () => {
                 <div className="skill-tags">
                   <span className="skill-tag">HTML</span>
                   <span className="skill-tag">CSS</span>
+                  <span className="skill-tag">JavaScript</span>
                   <span className="skill-tag">TypeScript</span>
                   <span className="skill-tag">React</span>
                   <span className="skill-tag">React Native</span>
@@ -114,10 +115,11 @@ const AboutPage: React.FC = () => {
               </div>
 
               <div className="skill-category">
-                <h4 className="category-title">DEVOPS</h4>
+                <h4 className="category-title">Tools&DevOps</h4>
                 <div className="skill-tags">
                   <span className="skill-tag">Git</span>
                   <span className="skill-tag">GitHub</span>
+                  <span className='skill-tag'>VS CODE</span>
                   <span className="skill-tag">Postman</span>
                   <span className="skill-tag">Docker</span>
                   <span className="skill-tag">Vercel</span>
@@ -135,6 +137,7 @@ const AboutPage: React.FC = () => {
                   <span className="skill-tag">PASCAL</span>
                   <span className="skill-tag">JAVA</span>
                   <span className="skill-tag">ASSEMBLY X86</span>
+                  <span className="skill-tag">PYTHON</span>
                 </div>
               </div>
             </div>
